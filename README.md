@@ -1,4 +1,4 @@
-# OpenMUC Channel Configurator 🚀
+# OpenMUC Channel Configurator 
 
 A lightweight **OSGi-based servlet** for dynamically creating and updating 
 `channels.xml` configuration files in **OpenMUC**.  
