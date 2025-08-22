@@ -1,0 +1,61 @@
+# =====================================
+# Java & Maven/Gradle
+# =====================================
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.log
+
+# Maven
+target/
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# =====================================
+# IntelliJ IDEA
+# =====================================
+.idea/
+*.iws
+*.ipr
+*.iml
+out/
+
+# =====================================
+# Eclipse
+# =====================================
+.classpath
+.project
+.settings/
+bin/
+
+# =====================================
+# VS Code
+# =====================================
+.vscode/
+
+# =====================================
+# OS Files
+# =====================================
+.DS_Store
+Thumbs.db
+
+# =====================================
+# OpenMUC / Config Files
+# =====================================
+framework/conf/channels.xml
+framework/conf/*.cfg
+framework/logs/
+framework/data/
+
+# =====================================
+# Other Temporary Files
+# =====================================
+*.tmp
+*.bak
+*.swp

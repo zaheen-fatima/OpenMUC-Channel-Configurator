@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'biz.aQute.bnd.builder'
+
+}
+
+def projectName = "OpenMUC App - Modbus App"
+
+jar {
+    bnd(
+            'Bundle-SymbolicName': 'org.openmuc.framework.app.project',
+            'Bundle-Version': '0.20.1',
+            // Only import what you actually use in your code
+            'Import-Package': '*',
+            'Export-Package': 'org.openmuc.framework.app.project;version=0.20.1',
+            '-dsannotations': '*',
+    )
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // DS annotations for @Component, @Activate, @Reference
+    compileOnly 'org.osgi:org.osgi.service.component.annotations:1.5.1'
+    implementation 'org.osgi:osgi.cmpn:7.0.0'
+    // HttpService API
+    compileOnly 'org.osgi:org.osgi.service.http:1.2.2'
+
+    // Servlet API
+    compileOnly 'javax.servlet:javax.servlet-api:3.1.0'
+
+    // SLF4J API
+    compileOnly 'org.slf4j:slf4j-api:1.7.36'
+
+    // OpenMUC APIs (only needed at compile time)
+    compileOnly project(':openmuc-core-api')
+}
+
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
